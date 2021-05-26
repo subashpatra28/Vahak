@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+
+.formContainer{
+    width: 50%;
+    margin: 20px auto;
+    button{
+        width: 80%;
+        background-color: $buttonBackground;
+        color: $white;
+        padding: 10px;
+            margin: 25px auto;
+            display: flex;
+            border: 0;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        &:disabled{
+            background-color: $disabledBackground;
+            color: $buttonBackground;            
+        }
+    }
+}

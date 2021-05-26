@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.container{
+    width: 50%;
+    margin: auto;
+    .formControl{
+        width: 75vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        i{
+            font-size: 3rem;
+        }
+        input[type="number"]{
+            border: 0;
+            font-size: 3rem;
+            max-width: 100%;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    .checkboxContainer{
+        width: 20%;
+        margin: 0 auto;
+    }
+    button{
+        width: 80%;
+        background-color: $buttonBackground;
+        color: $white;
+        padding: 10px;
+            margin: 25px auto;
+            display: flex;
+            border: 0;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        &:disabled{
+            background-color: $disabledBackground;
+            color: $buttonBackground;            
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@import '../styles/variables';
+
+.form__group, .form__number__group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 46%;
+    margin: 10px 15px 0;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $primary;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+    &::placeholder {
+      color: transparent;
+    }
+  
+    &:placeholder-shown ~ .form__label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+    }
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+  }
+  
+  .form__field:focus {
+    ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $primary;
+      font-weight:700;    
+    }
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-color: $primary;
+  }
+  /* reset input */
+  .form__field{
+    &:required,&:invalid { box-shadow:none; }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    img{
+        width: 80px;
+    }
+    span{
+        font-size: 2.5rem;
+        color: $primary;
+        font-weight: $normal;
+    }
+  }
+  .required{
+      color: red;
+  }
+  .banner{
+      background-color: $navbarBackground;
+      padding: 2rem 0;
+      h1{
+            color: $white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: $normal;
+        }
+    }
+    .required{
+      color: $error;
+    }
+    .requiredField{
+      border-color: $error;
+    }
+
+    .form__number__group{
+      width: 100%;
+      margin: 15px 15px 10px;
+    }
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+    }
+
+    @media screen and (max-width: 640px){
+      
+      .form__group, .form__number__group{
+        width: 100%;
+      }
+    }
+
+    .card{
+      border-bottom: 1px solid $gray;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin: 20px auto 10px;
+      .left{
+        h4{
+          color: $gray;
+          text-transform: uppercase;
+          font-weight: $normal;
+          margin: 0;
+        }
+      }
+      .right{
+        button{
+          color: $buttonBackground;
+          border: 0;
+          background-color: transparent;
+          font-weight: $bold;
+          font-size: 1.2rem;
+        }
+      }
+  }
+  .amountContainer{
+    border-bottom: 1px solid #9b9b9b;
+    padding: 10px 15px;
+    width: 50%;
+    margin: 20px auto 10px;
+    display: flex;
+    justify-content: space-between;
+    .right{
+      h1{
+        font-size: 3rem;
+      }
+    }
+  }
+  .selectContainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    select{
+      font-size: 1.2rem;
+      color: $gray;
+      margin: 20px 15px 0 !important;
+    }
+    span{
+      color: red;
+      margin: 0 15px;
+    }
+  }
